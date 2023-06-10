@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
     <title>Sign Up</title>
 </head>
 <body>
-    <header>Sign Up</header>
-   <form action="" method="" id="signUpForm">
-    <label for="name">Name: </label>
-    <input type="text" name="name" id="name" required>
+    <header id="main-header" class="bg-success text-white p-4 mb-3">
+        <h2 style="display:inline-block">Expense Tracker Sign Up</h2>
+        <a href="./login.html" style="float: right; color: aliceblue; margin-right: 0.5rem;">Sign in</a>
+    </header>
+<div class="container">
+    <div id="main" class="card card-body bg-light" style="width: 40ch; margin: 0 auto; float: none; margin-bottom: 10px; ">
+   <form action="" method="" id="signUpForm" class="form-control-sm ">
+    <label for="name" class="form-control-label">Name: </label>
+    <input type="text" name="name" id="name" class="form-control ml-2" required>
     
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required>
+    <label for="email" class="form-control-label">Email</label>
+    <input type="email" name="email" id="email" class="form-control ml-2" required>
     
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
+    <label for="password" class="form-control-label">Password</label>
+    <input type="password" name="password" id="password" class="form-control ml-2" required>
     
-    <input type="submit" value="Sign Up">
+    <input type="submit" class="btn btn-dark btn-outline-dark mt-2 ml-2 " value="Sign Up">
    </form>
-   <a href="/login">login</a>
+</div></div>
    
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
    <script src="/index.js"></script>

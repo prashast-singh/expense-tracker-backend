@@ -14,7 +14,7 @@ try{
     req.user = user;
     next();
 
-   }).catch(err => console.log("error: "+err))
+   }).catch(err => res.json("error: "+err))
 
    
 

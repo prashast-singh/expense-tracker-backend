@@ -39,7 +39,7 @@ app.use(expenseRoute)
 app.use(purchaseRoute)
 app.use(resetPassword)
 //FRONTEND
-/* app.use(express.static(path.join(__dirname,'public','script')))
+/* 
 
 app.use('/expenseview',(req,res,next)=>{
    res.sendFile(path.join(__dirname, 'views', 'expense.html')) 
@@ -49,6 +49,11 @@ app.use('/', (req, res, next)=>{
     res.sendFile(path.join(__dirname, 'views', 'index.html'))
 }) */
 
+app.use(express.static(path.join(__dirname,'public','script')))
+
+app.use('/', (req, res, next)=>{
+    res.sendFile(path.join(__dirname, 'views', 'index.html'))
+})
 
 
 

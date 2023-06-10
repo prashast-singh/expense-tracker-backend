@@ -10,13 +10,13 @@ function addUser(e){
         password: form.children[5].value
     }
 
-    axios.post('http://localhost:4000/user',{myObj})
+    axios.post('http://ec2-54-91-147-182.compute-1.amazonaws.com:4000/user',{myObj})
             .then(e=> {
            location.reload()
             })
             .catch(err => {
              let errPara=   document.createElement('p');
-             errPara.appendChild(document.createTextNode("Error: " + err.response.data.err));
+             errPara.appendChild(document.createTextNode("Error: " + err));
              form.appendChild(errPara)
             })
 }

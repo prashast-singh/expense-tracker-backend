@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <title>Login</title>
 </head>
 <body>
 
-    <form action="" id="loginForm">
-        <label for="email">Email</label>
-        <input type="email" name="email" required>
+    <header id="main-header" class="bg-success text-white p-4 mb-3">
+        <h2 style="display:inline-block">Expense Tracker Sign In</h2>
+        <a href="./index.html" style="float: right; color: aliceblue; margin-right: 0.5rem;">Sign up</a>
+    </header>
+    <div class="container">
+    <div id="main" class="card card-body bg-light" style="width: 40ch; margin: 0 auto; float: none; margin-bottom: 10px; ">
+    <form action="" id="loginForm" class="form-control-sm ">
+        <label for="email" class="form-control-label">Email</label>
+        <input type="email" name="email" class="form-control ml-2" required>
         
-        <label for="password">Password</label>
-        <input type="password" name="password" required>
+        <label for="password" class="form-control-label">Password</label>
+        <input type="password" name="password" class="form-control ml-2" required>
 
-        <input type="submit" value="Sign In">
+        <input type="submit"  class="btn btn-dark btn-outline-dark mt-2 ml-2 "  value="Sign In">
         
     </form>
-    <a href="/">Sign Up</a>
+    <button id="forgotPassword" class="btn btn-dark btn-outline-dark mt-2 ml-3 " style="width: 16ch; ">Forgot Password</button>
+    
+</div></div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
     <script src="/login.js"></script> 

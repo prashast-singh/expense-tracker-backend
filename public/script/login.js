@@ -9,11 +9,18 @@ function login(e){
         password: form.children[3].value,
     }
 
-    axios.post('http://localhost:4000/login',{myObj})
+    axios.post('http://ec2-54-91-147-182.compute-1.amazonaws.com:4000/login',{myObj})
             .then(e=> {
 
-               
-                    window.location= e.data.e
+               if(e.data.e==="/expenseview"){
+                localStorage.setItem('token', e.data.token)
+                localStorage.setItem('premiumUser', e.data.premiumUser)
+
+                window.location= "./expense.html"
+               }
+             
+
+                //
             //    let successPara=   document.createElement('p');
              //   successPara.appendChild(document.createTextNode("Success: " + e.data.e));
              //   form.appendChild(successPara)
@@ -26,3 +33,7 @@ function login(e){
 }
 
 //JSON.stringify(err.response.data.err)
+
+document.getElementById('forgotPassword').onclick = (e)=>{
+    window.location= "./forgotPassword.html"
+}
